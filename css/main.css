@@ -1,0 +1,144 @@
+/*** Global ***/
+body {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+
+/*** Main Container ***/
+.filter-container, .list-container {
+    width: 100%;
+    padding: 15px;
+}
+input#search {
+    padding: 5px 10px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/*** Logo Container ***/
+.logo-container, .nav-container {
+    text-align: center;
+}
+.logo-container img {
+    width: 50%;
+    margin: 10px auto;
+    object-fit: contain;
+}
+.nav-container li {
+    display: inline-block;
+    width: 50%;
+    color: #444444;
+}
+.nav-container li.active {
+    margin-right: -5px;
+    padding: 10px;
+    font-weight: bold;
+}
+.nav-container li a {
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: #444444;
+    background-color: #f5f5f5;
+}
+
+/*** Filter Container ***/
+.filter-container {
+    background-color: beige;
+}
+.filter-container label {
+    font-weight: bold;
+    color: #444444;
+}
+.filter-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px;
+    color: #444444;
+}
+
+/*** List Container ***/
+.list-container input {
+    width: 100%;
+    margin: 10px 0;
+}
+.list-container .list {
+    max-width: 768px;
+    margin: 0 auto;
+}
+.list .item {
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 3px;
+    margin: 10px 0;
+    color: #444444;
+}
+.item .item-profile, .item .item-details {
+    display: inline-block;
+    vertical-align: top;
+}
+.item-profile {
+    width: 30%;
+    margin-right: -5px;
+    position: relative;
+    min-height: 70px;
+}
+.item-details {
+    width: 70%;
+}
+.item-profile img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.item-details .item-name, .item-details .item-other {
+    margin: 10px 0;
+    font-weight: bold;
+}
+.item-details span {
+    font-size: 0.8em;
+}
+
+/*** Responsiveness ***/
+@media screen and (min-width:768px) {
+    .filter-container, .list-container {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .filter-container {
+        width: 20%;
+        margin-right: -5px;
+        height: 100vh;
+    }
+    .list-container {
+        width: 80%;
+    }
+    .filter-container input, .filter-container label {
+        display: inline-block;
+        margin: 5px 0;
+    }
+    .filter-container input {
+        width: 20%;
+        margin-right: -5px;
+    }
+    .filter-container label {
+        width: 80%;
+    }
+    .logo-container img {
+        width: 25%;
+    }
+}

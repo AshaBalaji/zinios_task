@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>ZiniosEdge</title>
+</head>
+<body>
+   <div class="main-container">
+       <nav>
+           <div class="logo-container">
+               <img src="img/ZELogo.png" alt="ZiniosEdge">
+           </div>
+           <div class="nav-container">
+               <ul>
+                   <li class="active">Filter</li>
+                   <li><a href="pages/iframe.html">iFrame</a></li>
+               </ul>
+           </div>
+       </nav>
+       <div class="filter-container">
+           <div class="filter-heading">Filter</div>
+           <input type="radio" name="filter" onClick="sortData(this.id)" id="default" checked><label for="default">Default</label>
+           <input type="radio" name="filter" onClick="sortData(this.id)" id="name"><label for="name">Name</label>
+           <input type="radio" name="filter" onClick="sortData(this.id)" id="age"><label for="age">Age</label>
+           <input type="radio" name="filter" onClick="sortData(this.id)" id="salary"><label for="salary">Salary</label>
+       </div>
+       <div class="list-container">
+           <input type="text" name="search" placeholder="Search" id="search">
+           <div class="list"></div>
+       </div>
+   </div> 
+   <script src="js/app.js"></script>
+</body>
+</html>
